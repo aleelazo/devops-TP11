@@ -46,4 +46,9 @@ resource "docker_network" "monitoring_network" {
     label = "environment"
     value = var.environment
   }
+
+  labels {
+    label = "managed-by"
+    value = "terraform"
+  }
 }
