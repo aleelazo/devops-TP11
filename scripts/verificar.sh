@@ -9,8 +9,10 @@ echo "=== Verificación Terraform — TP11 ==="
 echo ""
 echo "--- Terraform state ---"
 
-if terraform state list 2>/dev/null | grep -q "module"; then
-    COUNT=$(terraform state list 2>/dev/null | wc -l)
+STATE=$(terraform state list 2>/dev/null || true)
+COUNT=$(printf '%s\n' "$STATE" | grep -c "module" || true)
+
+if [ "$COUNT" -gt 0 ]; then
     ok "$COUNT recursos en el state"
 else
     fail "State vacío o no inicializado"
