@@ -1,3 +1,4 @@
+# Backend escalado a 3 replicas para alta disponibilidad
 environment       = "prod"
 project_name      = "devops-portfolio"
 postgres_db       = "notesdb"
