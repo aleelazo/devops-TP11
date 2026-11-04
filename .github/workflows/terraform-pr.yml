@@ -3,7 +3,7 @@ name: Terraform PR Review (Plan as Comment)
 on:
   pull_request:
     branches:
-      - main
+      - feature/tp11-terraform-iac
     paths:
       - '**.tf'
       - '**.tfvars'
