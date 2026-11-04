@@ -3,7 +3,7 @@ name: Terraform CD (Automated Apply)
 on:
   push:
     branches:
-      - main
+      - feature/tp11-terraform-iac
     paths:
       - '**.tf'
       - '**.tfvars'
